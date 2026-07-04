@@ -39,7 +39,7 @@
   .offers { padding: 70px 0; border-top: 1px solid #1a1a1a; }
   .offers h2 { font-size: 30px; font-weight: 700; margin-bottom: 12px; text-align: center; letter-spacing: -0.5px; }
   .offers .subtitle { color: #666; font-size: 15px; margin-bottom: 44px; text-align: center; }
-  .offer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 800px; margin: 0 auto; }
   .offer-card { background: #111; border: 1px solid #1a1a1a; border-radius: 12px; padding: 28px 22px; transition: all 0.2s; display: flex; flex-direction: column; }
   .offer-card:hover { border-color: #2a2a2a; transform: translateY(-2px); }
   .offer-card.featured { border-color: #33ccff; background: linear-gradient(180deg, #0d1a25 0%, #111 100%); }
@@ -141,43 +141,26 @@
     <p class="subtitle">One-time purchases. No subscriptions. No group calls.</p>
 
     <div class="offer-grid">
-      <!-- Tier 1 -->
+      <!-- Tier 1: PDF -->
       <div class="offer-card">
         <div class="tier">The Blueprint</div>
-        <h3>AI Ops Guide</h3>
+        <h3>AI Ops PDF</h3>
         <div class="price">$47</div>
-        <div class="price-sub">PDF + templates</div>
+        <div class="price-sub">Instant download</div>
         <ul>
-          <li>Full OpenClaw setup guide</li>
           <li>Agent stack architecture</li>
-          <li>My exact $14/mo config</li>
-          <li>Bot templates (CS, finance, ops)</li>
-          <li>Shopify automation scripts</li>
+          <li>Build your first AI bot</li>
+          <li>How to create skills & agents</li>
+          <li>OpenClaw setup guide</li>
+          <li>API connection walkthrough</li>
+          <li>Deploy on your own VPS</li>
           <li>Free updates for 1 year</li>
         </ul>
         <a href="https://buy.stripe.com/PLACEHOLDER" class="btn">Buy the Blueprint</a>
       </div>
 
-      <!-- Tier 2 -->
+      <!-- Tier 2: DFY -->
       <div class="offer-card featured">
-        <div class="tier">The Course</div>
-        <h3>Full AI Ops</h3>
-        <div class="price">$497</div>
-        <div class="price-sub">Video course</div>
-        <ul>
-          <li>Everything in The Blueprint</li>
-          <li>8+ hours of video walkthroughs</li>
-          <li>Build every bot with me</li>
-          <li>Meta Ads AI scaling system</li>
-          <li>China sourcing playbook</li>
-          <li>Klaviyo + email automation</li>
-          <li>Financial reporting automation</li>
-        </ul>
-        <a href="https://buy.stripe.com/PLACEHOLDER" class="btn">Buy the Course</a>
-      </div>
-
-      <!-- Tier 3 -->
-      <div class="offer-card">
         <div class="tier">Done For You</div>
         <h3>Your AI Ops</h3>
         <div class="price">$4,997</div>
@@ -189,11 +172,12 @@
           <li>All APIs connected & configured</li>
           <li>Loom walkthrough + setup guide</li>
           <li>You own everything. No lock-in.</li>
+          <li>7 days email support</li>
         </ul>
         <a href="https://buy.stripe.com/PLACEHOLDER" class="btn">Work With Me</a>
       </div>
 
-      <!-- Tier 4 -->
+      <!-- Tier 3: China DFY -->
       <div class="offer-card">
         <div class="tier">China DFY</div>
         <h3>Supply Chain</h3>
@@ -206,9 +190,17 @@
           <li>3PL warehouse setup</li>
           <li>Shipping & customs configured</li>
           <li>End-to-end supply chain automation</li>
+          <li>Managed by Phillips (GZ ops)</li>
         </ul>
         <a href="https://buy.stripe.com/PLACEHOLDER" class="btn">Let's Talk</a>
       </div>
+    </div>
+
+    <!-- Coming Soon -->
+    <div style="text-align:center; margin-top:32px; padding:20px; border:1px dashed #222; border-radius:10px; max-width:400px; margin-left:auto; margin-right:auto;">
+      <span style="color:#33ccff; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px;">Coming Soon</span>
+      <p style="color:#666; font-size:14px; margin-top:6px;">Video course: watch me build every agent, step by step. Join the waitlist.</p>
+      <a href="#waitlist" style="color:#33ccff; font-size:13px; text-decoration:none;">Get notified →</a>
     </div>
   </section>
 
