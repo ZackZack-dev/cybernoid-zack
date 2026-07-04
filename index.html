@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Cybernoid Zack — Build Your AI Business</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+  
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  .hero { padding: 100px 0 80px; text-align: center; }
+  .hero-badge { display: inline-block; background: rgba(0,180,255,0.1); color: #33ccff; border: 1px solid rgba(0,180,255,0.2); padding: 6px 18px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 28px; letter-spacing: 1.5px; text-transform: uppercase; }
+  .hero h1 { font-size: 52px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1.5px; }
+  .hero h1 .highlight { background: linear-gradient(135deg, #33ccff, #7b61ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero p { font-size: 18px; color: #888; max-width: 560px; margin: 0 auto 40px; }
+  .hero-stats { display: flex; justify-content: center; gap: 56px; margin-bottom: 48px; }
+  .hero-stat { text-align: center; }
+  .hero-stat .num { font-size: 36px; font-weight: 800; color: #fff; letter-spacing: -1px; }
+  .hero-stat .num.small { font-size: 28px; }
+  .hero-stat .label { font-size: 12px; color: #555; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .btn { display: inline-block; padding: 15px 36px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; transition: all 0.2s; cursor: pointer; }
+  .btn-primary { background: #33ccff; color: #0a0a0a; border: none; }
+  .btn-primary:hover { background: #5dd8ff; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(51,204,255,0.2); }
+  .btn-outline { border: 1px solid #333; color: #ccc; background: transparent; }
+  .btn-outline:hover { border-color: #666; color: #fff; }
+
+  /* Story */
+  .story { padding: 70px 0; border-top: 1px solid #1a1a1a; max-width: 700px; margin: 0 auto; }
+  .section-label { color: #33ccff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; }
+  .story h2 { font-size: 30px; font-weight: 700; margin-bottom: 24px; letter-spacing: -0.5px; line-height: 1.25; }
+  .story p { color: #999; font-size: 16px; margin-bottom: 16px; }
+
+  /* Offers */
+  .offers { padding: 70px 0; border-top: 1px solid #1a1a1a; }
+  .offers h2 { font-size: 30px; font-weight: 700; margin-bottom: 12px; text-align: center; letter-spacing: -0.5px; }
+  .offers .subtitle { color: #666; font-size: 15px; margin-bottom: 44px; text-align: center; }
+  .offer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .offer-card { background: #111; border: 1px solid #1a1a1a; border-radius: 12px; padding: 28px 22px; transition: all 0.2s; display: flex; flex-direction: column; }
+  .offer-card:hover { border-color: #2a2a2a; transform: translateY(-2px); }
+  .offer-card.featured { border-color: #33ccff; background: linear-gradient(180deg, #0d1a25 0%, #111 100%); }
+  .offer-card .tier { font-size: 11px; font-weight: 700; color: #33ccff; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
+  .offer-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+  .offer-card .price { font-size: 32px; font-weight: 800; margin-bottom: 6px; letter-spacing: -1px; }
+  .offer-card .price-sub { font-size: 13px; color: #555; margin-bottom: 18px; }
+  .offer-card ul { list-style: none; margin-bottom: 24px; flex: 1; }
+  .offer-card li { padding: 5px 0; color: #999; font-size: 13px; line-height: 1.4; }
+  .offer-card li::before { content: "→ "; color: #33ccff; font-weight: 600; }
+  .offer-card .btn { width: 100%; text-align: center; }
+  .offer-card .btn { background: transparent; border: 1px solid #333; color: #ccc; }
+  .offer-card.featured .btn { background: #33ccff; color: #0a0a0a; border: none; }
+  .offer-card .btn:hover { border-color: #666; color: #fff; }
+  .offer-card.featured .btn:hover { background: #5dd8ff; }
+
+  /* DFY details */
+  .dfy-details { padding: 60px 0; border-top: 1px solid #1a1a1a; max-width: 720px; margin: 0 auto; }
+  .dfy-details h2 { font-size: 28px; font-weight: 700; margin-bottom: 32px; text-align: center; }
+  .dfy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .dfy-card { background: #111; border: 1px solid #1a1a1a; border-radius: 10px; padding: 24px; }
+  .dfy-card h4 { font-size: 16px; font-weight: 600; margin-bottom: 10px; color: #33ccff; }
+  .dfy-card p, .dfy-card li { color: #999; font-size: 14px; }
+  .dfy-card ul { list-style: none; }
+  .dfy-card li { padding: 3px 0; }
+  .dfy-card li::before { content: "— "; color: #555; }
+
+  /* Who this is for */
+  .who { padding: 60px 0; border-top: 1px solid #1a1a1a; max-width: 720px; margin: 0 auto; }
+  .who h2 { font-size: 28px; font-weight: 700; margin-bottom: 28px; text-align: center; }
+  .who p { color: #999; font-size: 15px; margin-bottom: 18px; text-align: center; }
+
+  /* CTA */
+  .cta { padding: 80px 0; text-align: center; border-top: 1px solid #1a1a1a; }
+  .cta h2 { font-size: 34px; font-weight: 800; margin-bottom: 14px; letter-spacing: -0.5px; }
+  .cta p { color: #888; font-size: 17px; margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+  /* Footer */
+  footer { padding: 36px 0; text-align: center; color: #444; font-size: 13px; border-top: 1px solid #1a1a1a; }
+  footer a { color: #33ccff; text-decoration: none; }
+
+  /* FAQ */
+  .faq { padding: 60px 0; border-top: 1px solid #1a1a1a; max-width: 680px; margin: 0 auto; }
+  .faq h2 { font-size: 28px; font-weight: 700; margin-bottom: 32px; text-align: center; }
+  .faq-item { margin-bottom: 20px; }
+  .faq-item h4 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .faq-item p { color: #888; font-size: 14px; }
+
+  @media (max-width: 900px) {
+    .hero h1 { font-size: 34px; }
+    .hero-stats { gap: 28px; }
+    .hero-stats .num { font-size: 28px; }
+    .offer-grid { grid-template-columns: repeat(2, 1fr); }
+    .dfy-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 28px; }
+    .offer-grid { grid-template-columns: 1fr; }
+    .story h2, .offers h2, .cta h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">AI Business Automation</div>
+    <h1>I built a <span class="highlight">$2.5M brand</span>.<br>Then I rebuilt it — <span class="highlight">autonomous.</span></h1>
+    <p>I run a fashion brand with zero staff. AI handles everything — customer service, finance, creative, product, operations. I'm going to show you how.</p>
+
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">$2.5M</div><div class="label">Revenue</div></div>
+      <div class="hero-stat"><div class="num small">$14<span style="font-size:16px;color:#555">/mo</span></div><div class="label">AI Stack Cost</div></div>
+      <div class="hero-stat"><div class="num">0</div><div class="label">Staff</div></div>
+      <div class="hero-stat"><div class="num">30%</div><div class="label">Target MER</div></div>
+    </div>
+
+    <a href="#offers" class="btn btn-primary">See the offers</a>
+    <a href="#story" class="btn btn-outline" style="margin-left:12px">Read my story →</a>
+  </section>
+
+  <!-- Story -->
+  <section class="story" id="story">
+    <div class="section-label">My Story</div>
+    <h2>Cancer. Eviction. Lawsuit. Then a full rebuild — with AI.</h2>
+    <p>I'm Zack. Professional actor turned fashion brand founder. Built Hipland from my mum's back room to a permanent retail store on the Sunshine Coast, Australia. We generated $2.5 million in revenue.</p>
+    <p>Then a cyclone hit. Shopping centre renovations dragged on for months — screens over my storefront, zero foot traffic. No rent relief from the landlord. We fell behind.</p>
+    <p>New Year's Eve — evicted from the store. Then sued by the landlord. Then diagnosed with cancer. Surgery, March 2026.</p>
+    <p>I rebuilt from nothing with a laptop and a conviction: AI could run a lean business better — <em>and cheaper</em> — than any traditional team. Today my entire operation runs on autonomous AI agents I built myself. DeepSeek, not ChatGPT. Open source, not bolt.new. $14/month, not $14,000.</p>
+    <p><strong>I'm pulling back the curtain on everything.</strong> The bots. The stack. The scripts. The suppliers. The $2.5M in lessons — including the ones that cost me everything.</p>
+  </section>
+
+  <!-- Offers -->
+  <section class="offers" id="offers">
+    <div class="section-label">The Offers</div>
+    <h2>Learn the system. Or I'll build it for you.</h2>
+    <p class="subtitle">One-time purchases. No subscriptions. No group calls.</p>
+
+    <div class="offer-grid">
+      <!-- Tier 1 -->
+      <div class="offer-card">
+        <div class="tier">The Blueprint</div>
+        <h3>AI Ops Guide</h3>
+        <div class="price">$47</div>
+        <div class="price-sub">PDF + templates</div>
+        <ul>
+          <li>Full OpenClaw setup guide</li>
+          <li>Agent stack architecture</li>
+          <li>My exact $14/mo config</li>
+          <li>Bot templates (CS, finance, ops)</li>
+          <li>Shopify automation scripts</li>
+          <li>Free updates for 1 year</li>
+        </ul>
+        <a href="https://buy.stripe.com/PLACEHOLDER" class="btn">Buy the Blueprint</a>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="offer-card featured">
+        <div class="tier">The Course</div>
+        <h3>Full AI Ops</h3>
+        <div class="price">$497</div>
+        <div class="price-sub">Video course</div>
+        <ul>
+          <li>Everything in The Blueprint</li>
+          <li>8+ hours of video walkthroughs</li>
+          <li>Build every bot with me</li>
+          <li>Meta Ads AI scaling system</li>
+          <li>China sourcing playbook</li>
+          <li>Klaviyo + email automation</li>
+          <li>Financial reporting automation</li>
+        </ul>
+        <a href="https://buy.stripe.com/PLACEHOLDER" class="btn">Buy the Course</a>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="offer-card">
+        <div class="tier">Done For You</div>
+        <h3>Your AI Ops</h3>
+        <div class="price">$4,997</div>
+        <div class="price-sub">2-week build</div>
+        <ul>
+          <li>I build your entire AI ops stack</li>
+          <li>Custom agents for YOUR business</li>
+          <li>Deployed on your own VPS</li>
+          <li>All APIs connected & configured</li>
+          <li>Loom walkthrough + setup guide</li>
+          <li>You own everything. No lock-in.</li>
+        </ul>
+        <a href="https://buy.stripe.com/PLACEHOLDER" class="btn">Work With Me</a>
+      </div>
+
+      <!-- Tier 4 -->
+      <div class="offer-card">
+        <div class="tier">China DFY</div>
+        <h3>Supply Chain</h3>
+        <div class="price">$9,997</div>
+        <div class="price-sub">Done for you</div>
+        <ul>
+          <li>Everything in Your AI Ops</li>
+          <li>Supplier sourcing in Guangzhou</li>
+          <li>Negotiation + MOQ handling</li>
+          <li>3PL warehouse setup</li>
+          <li>Shipping & customs configured</li>
+          <li>End-to-end supply chain automation</li>
+        </ul>
+        <a href="https://buy.stripe.com/PLACEHOLDER" class="btn">Let's Talk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DFY Details -->
+  <section class="dfy-details">
+    <div class="section-label">Done For You</div>
+    <h2>What "I build it for you" actually means</h2>
+
+    <div class="dfy-grid">
+      <div class="dfy-card">
+        <h4>🖥️ Your Own Server</h4>
+        <p>Deployed on a $12/month DigitalOcean VPS in your name. You own it. No ongoing fees to me. No lock-in. Full root access.</p>
+      </div>
+      <div class="dfy-card">
+        <h4>🤖 Custom Agent Team</h4>
+        <ul>
+          <li>CS bot (email + returns)</li>
+          <li>Finance bot (daily P&amp;L, Meta spend)</li>
+          <li>Creative bot (image gen pipeline)</li>
+          <li>Ops bot (Shopify, inventory)</li>
+          <li>Research bot (competitors, trends)</li>
+        </ul>
+      </div>
+      <div class="dfy-card">
+        <h4>📦 Deliverables</h4>
+        <ul>
+          <li>Fully configured OpenClaw instance</li>
+          <li>All API keys connected & tested</li>
+          <li>Loom walkthrough (recorded, not a call)</li>
+          <li>Setup documentation (PDF)</li>
+          <li>7 days of email support</li>
+        </ul>
+      </div>
+      <div class="dfy-card">
+        <h4>⏱️ Timeline</h4>
+        <ul>
+          <li>Day 1-3: Discovery & server provision</li>
+          <li>Day 4-10: Agent builds & config</li>
+          <li>Day 11-14: Testing & handoff</li>
+        </ul>
+        <p style="margin-top:10px">2 weeks from payment to production. You approve every step.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who This Is For -->
+  <section class="who">
+    <h2>Is this for you?</h2>
+    <p><strong>You run an e-commerce brand</strong> (Shopify, WooCommerce, whatever) and you're drowning in operations. You spend too much time on emails, reports, product management, and not enough time on growth.</p>
+    <p><strong>You want AI to actually work</strong> — not another SaaS, not another ChatGPT wrapper, not another monthly subscription. A real, autonomous system that runs on your own server.</p>
+    <p><strong>You want it built by someone who's actually done it.</strong> Not a course from someone who's never shipped a product. Not a consultant who's never lost a dollar of their own money. Someone who rebuilt their business from a hospital bed with nothing but code.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <h4>What's OpenClaw?</h4>
+      <p>Open-source AI agent framework. It runs autonomous agents that can call APIs, read files, browse the web, and communicate with each other — like having a team of AI employees working 24/7. I run it on a $12/month VPS.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do I need to know how to code?</h4>
+      <p>For the PDF and Course — some technical comfort helps but I walk you through everything. For the DFY offers — zero coding required. I do it all.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What's the ongoing cost after setup?</h4>
+      <p>$12/month for the VPS (DigitalOcean). Plus your own API keys (DeepSeek ~$15/month, Gemini ~pay as you go). Total ongoing: ~$30-50/month. That's it.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What platform do you use for the AI models?</h4>
+      <p>Company-agnostic. I use DeepSeek, Gemini, Anthropic, and GPT — plugged into OpenClaw. You're not locked into any one provider. I teach you how to switch based on cost, speed, and capability.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do I pay?</h4>
+      <p>Stripe. One-time payment. No subscriptions from me. The DFY timeline starts the day payment clears.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>I lost everything. Rebuilt with AI.<br>Not keeping it to myself.</h2>
+    <p>Zero staff. Maximum output. Your turn.</p>
+    <a href="#offers" class="btn btn-primary">Get Started</a>
+  </section>
+
+  <footer>
+    <p>Zack Curran · Hipland &amp; Phoenix Distribution · Sunshine Coast, Australia</p>
+    <p style="margin-top:8px"><a href="mailto:hello@hipland.co">hello@hipland.co</a> · <a href="https://hipland.co">hipland.co</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
